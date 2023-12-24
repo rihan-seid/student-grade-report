@@ -5,10 +5,11 @@ import { ICourse } from '../models/course';
 const apiUrl = process.env.API_URL ??"https://localhost:7069/api/";
 
 type CourseState = {
+   // grade: any;
     courses: ICourse[];
     addCourse: (course: ICourse) => void;
     editCourse: (course: ICourse) => void;
-    getCourse: (id: string) => Promise<ICourse>; // Updated return type
+    getCourse: (id: string) => Promise<ICourse>;
     getCourses: () => Promise<ICourse[]>;
     setCourses: (courses: ICourse[]) => void;
     setCount: (count: number) => void;  

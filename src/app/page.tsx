@@ -1,20 +1,9 @@
 "use client"
 import { Button } from '@mui/material'
-import axios from 'axios'
 import Image from 'next/image'
 
 const HeroSection = () => {
-  const createStudent=()=>{
-    axios.post('https://localhost:7069/api/Student/Student', {
-      name: 'Fred'   
-     })
-      .then(function (response) {
-        const result= response;
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
+
   return (
     <div className=' grid gap-[60px] items-center grid-cols-1 md:grid-cols-2'>
       <div>
@@ -30,7 +19,7 @@ const HeroSection = () => {
       <div>
         <Image src={"/hero.png"} alt='Hero Image' className='object-fill' height={577} width={580} />
       </div>
-      <Button onClick={createStudent}>Add Student</Button>
+    
     </div>
   )
 }
